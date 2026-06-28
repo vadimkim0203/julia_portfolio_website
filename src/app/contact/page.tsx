@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 
-const EMAIL = 'vadim.kim0203@gmail.com';
+const EMAIL = 'juliia.ten@gmail.com';
 
 const VARIANTS_CONTAINER = {
   hidden: { opacity: 0 },

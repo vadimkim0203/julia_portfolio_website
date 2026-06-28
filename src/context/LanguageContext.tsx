@@ -27,12 +27,10 @@ interface LanguageContextType {
 
 const translations: Translations = {
   en: {
-    name: 'Vadim Kim',
-    specialty:
-      'B2B & Retail Operations | Software Engineering & Data Structures Enthusiast',
-    greetings: 'Hello!',
-    introduction: `I'm Vadim and my experience lies in overseas B2B sales and retail operations with a background in international business development and customer relationship management. 
-    Currently working in the beauty industry, supporting global partnerships, market expansion, and go-to-market operations. Skilled at understanding customers’ needs, coordinating with different partners, and delivering practical solutions. Also interested in software engineering and digital solutions that improve business efficiency and user experience.`,
+    name: 'Yuliya Ten',
+    specialty: 'B2B Marketing | SNS Marketing | Influencer Marketing',
+    greetings: 'Hi!',
+    introduction: `I'm Yuliya, a digital marketer specializing in SNS marketing, influencer marketing, and beauty brand communications. I have experience planning and managing social media campaigns, building relationships with influencers, and developing marketing strategies that increase brand visibility and engagement. I enjoy combining creativity with statistical insights to create effective campaigns and valuable connections between brands and customers.`,
     headerWork: 'Work Experience',
     headerEducation: 'Education',
     headerProjects: 'Projects',
@@ -44,12 +42,11 @@ const translations: Translations = {
     'navigation.contact': 'Contact',
   },
   ko: {
-    name: '김바딤',
+    name: '율리야',
     specialty:
       'B2B 및 리테일 운영 전문가 | 소프트웨어 엔지니어링 및 자료구조에 관심',
     greetings: '안녕하세요!',
-    introduction: `안녕하세요, 저는 김바딤입니다. 해외 B2B 영업 및 리테일 운영 분야에서 경험을 쌓아왔습니다. 국제 비즈니스 개발과 고객 관계 관리를 기반으로 다양한 업무를 수행해왔습니다.
-현재는 뷰티 산업에서 근무하며 글로벌 파트너십, 시장 확장, 그리고 Go-to-Market 운영을 지원하고 있습니다. 고객의 니즈를 이해하고 다양한 파트너와 협업하며 실질적인 솔루션을 제공하는 데 강점이 있습니다. 또한 비즈니스 효율성과 사용자 경험을 향상시키는 소프트웨어 엔지니어링과 디지털 솔루션에도 관심을 가지고 있습니다.`,
+    introduction: `안녕하세요. 저는 율리야 입니다. SNS 마케팅과 인플루언서 마케팅을 담당하는 디지털 마케터입니다. 소셜 미디어 캠페인을 기획하고 운영하며, 인플루언서와 협업해 브랜드를 홍보하는 일을 하고 있습니다. 브랜드를 더 많은 사람들에게 알리고 고객과 좋은 관계를 만드는 마케팅에 관심이 많습니다. 새로운 아이디어와 데이터를 활용해 효과적인 캠페인을 만드는 것을 좋아합니다.`,
     headerWork: '경력 사항',
     headerEducation: '학력 사항',
     headerProjects: '프로젝트',

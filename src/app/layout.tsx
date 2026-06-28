@@ -23,10 +23,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Vadim Kim - CV',
+  title: 'Yuliya Ten - CV',
   description:
-    "Explore Vadim Kim's portfolio and CV. Passionate about Data Structures, Industrial Design, Beauty and Fashion.",
-  icons: '/images/avatar.jpg',
+    "Explore Yuliya 's portfolio and CV. Passionate about Digital Marketing, Social Media Strategy, Influencer Marketing, and the Beauty Industry.",
+  icons: {
+    icon: '/images/avatar.jpg',
+    shortcut: '/images/avatar.jpg',
+    apple: '/images/avatar.jpg',
+  },
 };
 
 export default function RootLayout({

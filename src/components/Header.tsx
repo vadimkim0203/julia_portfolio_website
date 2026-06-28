@@ -24,7 +24,7 @@ function Header() {
     <>
       <header className="flex flex-col gap-4 py-5 sm:flex-row sm:items-center sm:justify-between">
         <div className="font-bold text-black text-2xl dark:text-white">
-          <Link href="/">VADIM KIM</Link>
+          <Link href="/">Yuliya Ten</Link>
         </div>
         {mounted && (
           <div className="flex items-center gap-4">

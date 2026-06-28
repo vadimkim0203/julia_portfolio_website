@@ -21,7 +21,7 @@ export default function MagneticSkills() {
                 className="w-5 h-5 rounded-full dark:invert"
               />
             ) : (
-              <StackIcon name={skill.slug} className="w-5 h-5 rounded-full" />
+              <StackIcon name={skill.slug} className="w-5 h-5 rounded-full dark:invert" />
             )}
             <span>{skill.name}</span>
           </button>

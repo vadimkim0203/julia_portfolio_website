@@ -53,7 +53,7 @@ function ProjectVideo({ src }: ProjectVideoProps) {
           autoPlay
           loop
           muted
-          className="aspect-video w-full cursor-zoom-in rounded-xl"
+          className="aspect-[9/16] w-full max-h-[560px] cursor-zoom-in rounded-xl"
         />
       </MorphingDialogTrigger>
     </MorphingDialog>
@@ -85,7 +85,7 @@ export default function Home() {
               <Image
                 src="/images/avatar.jpg"
                 alt="Profile photo"
-                className="w-full h-full object-cover object-top rounded-full bg-gray-100 grayscale hover:grayscale-0 sm:float-right"
+                className="w-full h-full object-cover object-[center_30%] rounded-full bg-gray-100 grayscale hover:grayscale-0 sm:float-right"
                 unoptimized
                 width={160}
                 height={160}
