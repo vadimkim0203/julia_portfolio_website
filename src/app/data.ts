@@ -65,6 +65,8 @@ type Activity = {
   images: string[];
   uid: string;
   link?: string;
+  titleKey?: string;
+  descriptionKey?: string;
 };
 
 export type Skill = {
@@ -388,6 +390,33 @@ export const BLOG_POSTS: BlogPost[] = [
 ];
 
 export const ACTIVITY_LIST: Activity[] = [
+  {
+    title: 'Nurilounge Offline Event Planning & Execution',
+    description:
+      "Led the planning and execution of Nurilounge's offline event participation, creating event concepts and operational strategies to strengthen brand awareness.",
+    images: [
+      '/images/activities/nuriday.jpg',
+      '/images/activities/nuriday1.jpg',
+      '/images/activities/nuriday2.jpg',
+    ],
+    uid: 'activity-4',
+    link: 'https://www.instagram.com/reel/DO5TaTYkrIQ/',
+    titleKey: 'activity.nurilounge.title',
+    descriptionKey: 'activity.nurilounge.description',
+  },
+  {
+    title: 'Beauty Exhibition Marketing & Business Support',
+    description:
+      'Supported marketing activities and business meetings at beauty exhibitions by presenting products, assisting communication with prospective buyers, and collecting on-site market feedback to generate marketing insights.',
+    images: [
+      '/images/activities/kazakhstan2025.jpg',
+      '/images/activities/moscow.jpg',
+      '/images/activities/kazakhstan2026.jpg',
+    ],
+    uid: 'activity-5',
+    titleKey: 'activity.beauty-exhibition.title',
+    descriptionKey: 'activity.beauty-exhibition.description',
+  },
   // {
   //   title: 'Uniqlo Manager Candidate Program Photo Shoot',
   //   description:
