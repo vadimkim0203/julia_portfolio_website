@@ -417,6 +417,24 @@ export const ACTIVITY_LIST: Activity[] = [
     titleKey: 'activity.beauty-exhibition.title',
     descriptionKey: 'activity.beauty-exhibition.description',
   },
+  {
+    title: 'Creative Content Production',
+    description:
+      'Planned and produced engaging marketing content from concept to completion, including shoot planning, on-camera appearances, video production, and post-editing to strengthen brand identity and audience engagement.',
+    images: [],
+    uid: 'activity-6',
+    titleKey: 'activity.creative-content-production.title',
+    descriptionKey: 'activity.creative-content-production.description',
+  },
+  {
+    title: 'MIGUHARA Content Strategy & Brand Communication',
+    description:
+      'Developed and executed content strategies across digital channels, managing the entire content production process to deliver consistent brand messaging and enhance customer engagement.',
+    images: [],
+    uid: 'activity-7',
+    titleKey: 'activity.miguhara-content-strategy-brand-communication.title',
+    descriptionKey: 'activity.miguhara-content-strategy-brand-communication.description',
+  },
   // {
   //   title: 'Uniqlo Manager Candidate Program Photo Shoot',
   //   description:

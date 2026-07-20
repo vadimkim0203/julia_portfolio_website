@@ -3,7 +3,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import Link from 'next/link';
-import { AnimatedBackground } from '@/components/ui/animated-background';
 import { BLOG_POSTS } from '@/app/data';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -61,39 +60,26 @@ function Projects() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-3 text-lg font-medium pt-6">Projects</h3>
+        <h3 className="mb-3 pt-6 text-xl font-medium">Projects</h3>
         {/* <p className="mb-5 text-zinc-600 dark:text-zinc-400">Coming soon!</p> */}
 
-        <div className="flex flex-col space-y-0">
-          <AnimatedBackground
-            enableHover
-            className="h-full w-full rounded-lg bg-zinc-100 dark:bg-zinc-900/80"
-            transition={{
-              type: 'spring',
-              bounce: 0,
-              duration: 0.2,
-            }}
-          >
-            {[...projectEntries, ...BLOG_POSTS].map((post) => (
-              <Link
-                key={post.uid}
-                target={post.link.startsWith('http') ? '_blank' : undefined}
-                rel={post.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-                className="-mx-3 rounded-xl px-3 py-3"
-                href={post.link}
-                data-id={post.uid}
-              >
-                <div className="flex flex-col space-y-1">
-                  <h4 className="font-normal dark:text-zinc-100">
-                    {post.title}
-                  </h4>
-                  <p className="text-zinc-500 dark:text-zinc-400">
-                    {post.description}
-                  </p>
-                </div>
-              </Link>
-            ))}
-          </AnimatedBackground>
+        <div className="flex flex-col space-y-3">
+          {[...projectEntries, ...BLOG_POSTS].map((post) => (
+            <Link
+              key={post.uid}
+              target={post.link.startsWith('http') ? '_blank' : undefined}
+              rel={post.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+              className="rounded-lg bg-zinc-100 p-6 transition-colors duration-200 hover:bg-zinc-200 dark:bg-zinc-900/80 dark:hover:bg-zinc-800/80"
+              href={post.link}
+              data-id={post.uid}
+            >
+              <div className="flex flex-col space-y-1">
+                <h4 className="text-base font-medium dark:text-zinc-100">
+                  {post.title}
+                </h4>
+              </div>
+            </Link>
+          ))}
         </div>
       </motion.section>
     </motion.main>

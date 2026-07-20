@@ -31,6 +31,8 @@ const ACTIVITY_ROUTES: Record<string, string> = {
   'activity-3': '/activities/mongolia-field-trip',
   'activity-4': '/activities/nurilounge',
   'activity-5': '/activities/beauty-exhibition',
+  'activity-6': '/activities/creative-content-production',
+  'activity-7': '/activities/miguhara-content-strategy-brand-communication',
   'publication-1': '/activities/codeseoul',
   'publication-2': '/activities/supabase',
 };
@@ -40,11 +42,6 @@ export default function Activities() {
 
   const getActivityTitle = (activity: { title: string; titleKey?: string }) =>
     activity.titleKey ? t(activity.titleKey) : activity.title;
-
-  const getActivityDescription = (activity: {
-    description: string;
-    descriptionKey?: string;
-  }) => (activity.descriptionKey ? t(activity.descriptionKey) : activity.description);
 
   // Combine all activities
   const allActivities = [
@@ -73,7 +70,7 @@ export default function Activities() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-3 text-lg font-medium pt-6">{t('activities.title')}</h3>
+        <h3 className="mb-3 pt-6 text-xl font-medium">{t('activities.title')}</h3>
         <div className="flex flex-col space-y-3">
           {allActivities.map((activity) => (
             <Link
@@ -85,9 +82,6 @@ export default function Activities() {
                 <h4 className="text-base font-medium dark:text-zinc-100">
                   {getActivityTitle(activity)}
                 </h4>
-                <p className="text-sm text-zinc-600 dark:text-zinc-400">
-                  {getActivityDescription(activity) !== getActivityTitle(activity) ? getActivityDescription(activity) : ''}
-                </p>
               </div>
             </Link>
           ))}
