@@ -26,15 +26,15 @@ const TRANSITION = {
 
 const CONTENT_CREATION_MGH_VIDEOS = [
   {
-    src: '/videos/contentCreationMgh.mp4',
+    src: '/videos/contentCreationMgh.MP4',
     link: 'https://www.instagram.com/reel/C5VQI9wB0Yo/',
   },
   {
-    src: '/videos/contentCreationMgh1.mp4',
+    src: '/videos/contentCreationMgh1.MP4',
     link: 'https://www.instagram.com/reel/C1ENG36hF7K/',
   },
   {
-    src: '/videos/contentCreationMgh2.mp4',
+    src: '/videos/contentCreationMgh2.MP4',
     link: 'https://www.instagram.com/reel/C5VQI9wB0Yo/',
   },
 ];
