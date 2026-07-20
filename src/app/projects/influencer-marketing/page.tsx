@@ -163,13 +163,6 @@ export default function InfluencerMarketingProjectPage() {
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
               {section.images.map((image, idx) => {
                 const isLandscape = image.orientation === 'landscape';
-                const links =
-                  image.links ??
-                  (image.link && image.linkKey
-                    ? [{ link: image.link, linkKey: image.linkKey }]
-                    : []);
-                const primaryLink = links[0]?.link;
-
                 const media = (
                   <div
                     className={`relative w-full overflow-hidden ${
@@ -195,9 +188,9 @@ export default function InfluencerMarketingProjectPage() {
                       .filter(Boolean)
                       .join(' ')}
                   >
-                    {primaryLink ? (
+                    {image.link ? (
                       <a
-                        href={primaryLink}
+                        href={image.link}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="block"
@@ -207,20 +200,17 @@ export default function InfluencerMarketingProjectPage() {
                     ) : (
                       media
                     )}
-                    {links.length > 0 ? (
-                      <div className="flex flex-col gap-2 p-4">
-                        {links.map((item) => (
-                          <a
-                            key={item.link}
-                            href={item.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1 text-sm text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200"
-                          >
-                            {t(item.linkKey)}
-                            <span>→</span>
-                          </a>
-                        ))}
+                    {image.link && image.linkKey ? (
+                      <div className="p-4">
+                        <a
+                          href={image.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 text-sm text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200"
+                        >
+                          {t(image.linkKey)}
+                          <span>→</span>
+                        </a>
                       </div>
                     ) : null}
                   </div>
