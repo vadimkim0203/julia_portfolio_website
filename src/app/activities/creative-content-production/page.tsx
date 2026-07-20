@@ -28,14 +28,18 @@ const CONTENT_CREATION_TFIT_VIDEOS = [
   {
     src: '/videos/contentCreationTfit.mp4',
     link: 'https://vt.tiktok.com/ZSXHNubbb/',
+    linkKey: 'activity.viewOnTikTok',
   },
   {
     src: '/videos/contentCreationTfit1.mp4',
     link: 'https://vt.tiktok.com/ZSXHNj6GC/',
+    linkKey: 'activity.viewOnTikTok',
   },
   {
     src: '/videos/contentCreationTfit2.mp4',
     link: 'https://www.instagram.com/reel/DakB7LShOPh/',
+    linkKey: 'activity.viewOnInstagram',
+    objectPosition: 'object-bottom',
   },
 ];
 
@@ -70,7 +74,7 @@ export default function CreativeContentProductionActivity() {
 
       <motion.div variants={VARIANTS_ITEM} transition={TRANSITION}>
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 xl:grid-cols-3">
-          {CONTENT_CREATION_TFIT_VIDEOS.map((video, index) => (
+          {CONTENT_CREATION_TFIT_VIDEOS.map((video) => (
             <a
               key={video.src}
               href={video.link}
@@ -78,17 +82,24 @@ export default function CreativeContentProductionActivity() {
               rel="noopener noreferrer"
               className="overflow-hidden rounded-xl border border-zinc-200 bg-zinc-50 transition-colors hover:bg-zinc-100 dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:bg-zinc-800/80"
             >
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload="metadata"
-                className="w-full"
-              >
-                <source src={video.src} type="video/mp4" />
-              </video>
-              
+              <div className="relative aspect-[884/1560] w-full overflow-hidden">
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
+                  className={`absolute inset-0 h-full w-full object-cover ${video.objectPosition ?? 'object-center'}`}
+                >
+                  <source src={video.src} type="video/mp4" />
+                </video>
+              </div>
+              <div className="p-4">
+                <p className="inline-flex items-center gap-1 text-sm text-zinc-600 dark:text-zinc-400">
+                  {t(video.linkKey)}
+                  <span>→</span>
+                </p>
+              </div>
             </a>
           ))}
         </div>

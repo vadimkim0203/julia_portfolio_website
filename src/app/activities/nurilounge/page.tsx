@@ -26,10 +26,9 @@ const TRANSITION = {
   duration: 0.3,
 };
 
-const NURILOUNGE_IMAGES = [
-  '/images/activities/nuriday.jpg',
+const NURILOUNGE_MEDIA = [
+  '/videos/nuriday2.mp4',
   '/images/activities/nuriday1.jpg',
-  '/images/activities/nuriday2.jpg',
 ];
 
 export default function NuriloungeActivity() {
@@ -73,20 +72,32 @@ export default function NuriloungeActivity() {
       </motion.div>
 
       <motion.div variants={VARIANTS_ITEM} transition={TRANSITION}>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {NURILOUNGE_IMAGES.map((image, idx) => (
-            <div
-              key={idx}
-              className="relative aspect-square overflow-hidden rounded-xl bg-zinc-200 group dark:bg-zinc-800"
-            >
+        <div className="grid grid-cols-1 items-center gap-4 sm:grid-cols-2 sm:gap-5">
+          {NURILOUNGE_MEDIA.map((src, idx) =>
+            src.endsWith('.mp4') ? (
+              <video
+                key={idx}
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="metadata"
+                className="mx-auto max-h-[43.2vh] w-auto max-w-full"
+              >
+                <source src={src} type="video/mp4" />
+              </video>
+            ) : (
               <Image
-                src={image}
+                key={idx}
+                src={src}
                 alt={`Nurilounge event photo ${idx + 1}`}
-                fill
-                className="object-cover transition-transform duration-300 group-hover:scale-105"
+                width={3760}
+                height={2354}
+                sizes="(min-width: 640px) 320px, 100vw"
+                className="mx-auto h-auto max-h-[36vh] w-auto max-w-full object-contain"
               />
-            </div>
-          ))}
+            ),
+          )}
         </div>
       </motion.div>
     </motion.main>

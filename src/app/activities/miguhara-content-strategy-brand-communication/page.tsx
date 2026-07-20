@@ -26,16 +26,21 @@ const TRANSITION = {
 
 const CONTENT_CREATION_MGH_VIDEOS = [
   {
-    src: '/videos/contentCreationMgh.MP4',
+    src: '/videos/contentCreationMgh.mp4',
     link: 'https://www.instagram.com/reel/C5VQI9wB0Yo/',
+    linkKey: 'activity.viewOnInstagram',
+    objectPosition: 'object-bottom',
   },
   {
-    src: '/videos/contentCreationMgh1.MP4',
+    src: '/videos/contentCreationMgh1.mp4',
     link: 'https://www.instagram.com/reel/C1ENG36hF7K/',
+    linkKey: 'activity.viewOnInstagram',
   },
   {
-    src: '/videos/contentCreationMgh2.MP4',
+    src: '/videos/contentCreationMgh2.mp4',
     link: 'https://www.instagram.com/reel/C5VQI9wB0Yo/',
+    linkKey: 'activity.viewOnInstagram',
+    objectPosition: 'object-bottom',
   },
 ];
 
@@ -72,7 +77,7 @@ export default function MiguharaContentStrategyBrandCommunicationActivity() {
 
       <motion.div variants={VARIANTS_ITEM} transition={TRANSITION}>
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 xl:grid-cols-3">
-          {CONTENT_CREATION_MGH_VIDEOS.map((video, index) => (
+          {CONTENT_CREATION_MGH_VIDEOS.map((video) => (
             <a
               key={video.src}
               href={video.link}
@@ -80,16 +85,24 @@ export default function MiguharaContentStrategyBrandCommunicationActivity() {
               rel="noopener noreferrer"
               className="overflow-hidden rounded-xl border border-zinc-200 bg-zinc-50 transition-colors hover:bg-zinc-100 dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:bg-zinc-800/80"
             >
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload="metadata"
-                className="w-full"
-              >
-                <source src={video.src} type="video/mp4" />
-              </video>
+              <div className="relative aspect-[884/1560] w-full overflow-hidden">
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
+                  className={`absolute inset-0 h-full w-full object-cover ${video.objectPosition ?? 'object-center'}`}
+                >
+                  <source src={video.src} type="video/mp4" />
+                </video>
+              </div>
+              <div className="p-4">
+                <p className="inline-flex items-center gap-1 text-sm text-zinc-600 dark:text-zinc-400">
+                  {t(video.linkKey)}
+                  <span>→</span>
+                </p>
+              </div>
             </a>
           ))}
         </div>

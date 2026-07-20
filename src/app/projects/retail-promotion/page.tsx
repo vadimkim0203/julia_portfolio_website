@@ -25,16 +25,10 @@ const TRANSITION = {
   duration: 0.3,
 };
 
-const RETAIL_PROMOTION_IMAGES = [
-  {
-    src: '/images/projects/offlineRetailGa1.png',
-    alt: 'Offline retail promotion campaign visual 1',
-  },
-  {
-    src: '/images/projects/offlineRetailGa2.png',
-    alt: 'Offline retail promotion campaign visual 2',
-  },
-];
+const RETAIL_PROMOTION_IMAGE = {
+  src: '/images/projects/offlineRetailGa1.png',
+  alt: 'Offline retail promotion campaign visual 1',
+};
 
 export default function RetailPromotionProjectPage() {
   const { t } = useLanguage();
@@ -80,8 +74,8 @@ export default function RetailPromotionProjectPage() {
             >
               <div className="relative aspect-[16/10] w-full overflow-hidden bg-transparent md:aspect-[20/11] lg:aspect-[24/13]">
                 <Image
-                  src={RETAIL_PROMOTION_IMAGES[0].src}
-                  alt={RETAIL_PROMOTION_IMAGES[0].alt}
+                  src={RETAIL_PROMOTION_IMAGE.src}
+                  alt={RETAIL_PROMOTION_IMAGE.alt}
                   fill
                   sizes="(max-width: 768px) 100vw, 40vw"
                   className="object-contain"
@@ -100,34 +94,23 @@ export default function RetailPromotionProjectPage() {
             </div>
           </div>
 
-          <div className="overflow-hidden">
-            <a
-              href="https://www.youtube.com/watch?v=JwvjV-5JN24"
-              target="_blank"
-              rel="noreferrer"
-              className="block"
+          <a
+            href="https://www.youtube.com/watch?v=JwvjV-5JN24"
+            target="_blank"
+            rel="noreferrer"
+            className="block overflow-hidden"
+          >
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="metadata"
+              className="w-full"
             >
-              <div className="relative aspect-[16/10] w-full overflow-hidden bg-transparent md:aspect-[20/11] lg:aspect-[24/13]">
-                <Image
-                  src={RETAIL_PROMOTION_IMAGES[1].src}
-                  alt={RETAIL_PROMOTION_IMAGES[1].alt}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 70vw"
-                  className="object-contain"
-                />
-              </div>
-            </a>
-            <div className="mt-3 flex flex-wrap gap-3 text-sm text-zinc-600 dark:text-zinc-400">
-              <a
-                href="https://www.youtube.com/watch?v=JwvjV-5JN24"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 transition-colors hover:text-zinc-900 dark:hover:text-zinc-200"
-              >
-                <span>Miguhara x Gold Apple</span>
-              </a>
-            </div>
-          </div>
+              <source src="/videos/miguharaGoldApple.mp4" type="video/mp4" />
+            </video>
+          </a>
         </div>
       </motion.div>
     </motion.main>

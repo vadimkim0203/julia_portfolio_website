@@ -381,9 +381,8 @@ export const ACTIVITY_LIST: Activity[] = [
     description:
       "Led the planning and execution of Nurilounge's offline event participation, creating event concepts and operational strategies to strengthen brand awareness.",
     images: [
-      // '/images/activities/nuriday.jpg',
+      '/videos/nuriday2.mp4',
       '/images/activities/nuriday1.jpg',
-      // '/images/activities/nuriday2.jpg',
     ],
     uid: 'activity-4',
     link: 'https://www.instagram.com/reel/DO5TaTYkrIQ/',

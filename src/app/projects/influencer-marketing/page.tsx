@@ -29,23 +29,92 @@ const INFLUENCER_MARKETING_SECTIONS = [
   {
     title: 'MIGUHARA',
     images: [
-      '/images/projects/influencerMarketing1Mgh.png',
-      '/images/projects/influencerMarketing10Mgh.png',
-      '/images/projects/influencerMarketing11Mgh.png',
+      {
+        src: '/images/projects/influencerMarketingMgh.png',
+        link: 'https://www.instagram.com/reels/C3sHZC-vAqi/',
+        linkKey: 'activity.viewOnInstagram',
+      },
+      {
+        src: '/images/projects/influencerMarketingMgh1.png',
+        link: 'https://www.instagram.com/reels/CwcDCVktMb4/',
+        linkKey: 'activity.viewOnInstagram',
+      },
+      {
+        src: '/images/projects/influencerMarketingMgh2.png',
+        link: 'https://www.instagram.com/reels/C4u89TdI2r9/',
+        linkKey: 'activity.viewOnInstagram',
+      },
+      {
+        src: '/images/projects/influencerMarketingMgh3.png',
+        link: 'https://www.instagram.com/reels/C6yfDrYruiC/',
+        linkKey: 'activity.viewOnInstagram',
+      },
+      {
+        src: '/images/projects/influencerMarketingMgh4.png',
+        link: 'https://www.instagram.com/reels/C9mLWGRSrAB/',
+        linkKey: 'activity.viewOnInstagram',
+      },
+      {
+        src: '/images/projects/influencerMarketingMgh5.png',
+        link: 'https://www.instagram.com/reels/C7ZKL4LogAD/',
+        linkKey: 'activity.viewOnInstagram',
+      },
+      {
+        src: '/images/projects/influencerMarketingMgh6.png',
+        orientation: 'landscape' as const,
+        link: 'https://www.youtube.com/watch?v=JwvjV-5JN24&t=28s',
+        linkKey: 'activity.viewOnYouTube',
+      },
     ],
   },
   {
     title: 'TFIT',
     images: [
-      '/images/projects/influencerMarketing2Tfit.png',
-      '/images/projects/influencerMarketing3Tfit.png',
-      '/images/projects/influencerMarketing4Tfit.png',
-      '/images/projects/influencerMarketing5Tfit.png',
-      '/images/projects/influencerMarketing6Tfit.png',
-      '/images/projects/influencerMarketing7Tfit.png',
-      '/images/projects/influencerMarketing8Tfit.png',
-      '/images/projects/influencerMarketing9Tfit.png',
-      '/images/projects/influencerMarketingTfit.jpg',
+      {
+        src: '/images/projects/influencerMarketingTfit.jpg',
+        link: 'https://www.tiktok.com/@_agentgirl_/video/7579895072578145556',
+        linkKey: 'activity.viewOnTikTok',
+      },
+      {
+        src: '/images/projects/influencerMarketingTfit3.jpg',
+        link: 'https://www.tiktok.com/@anelqyzz/video/7423082907884916011',
+        linkKey: 'activity.viewOnTikTok',
+      },
+      {
+        src: '/images/projects/influencerMarketingTfit4.jpg',
+        link: 'https://www.tiktok.com/@verolluna/photo/7581176086910782740',
+        linkKey: 'activity.viewOnTikTok',
+      },
+      {
+        src: '/images/projects/influencerMarketingTfit5.jpg',
+        link: 'https://www.tiktok.com/@ddalqiwee/video/7498442343662603575',
+        linkKey: 'activity.viewOnTikTok',
+      },
+      {
+        src: '/images/projects/influencerMarketingTfit6.jpg',
+        link: 'https://www.tiktok.com/@anferovamary/video/7537771846779931926',
+        linkKey: 'activity.viewOnTikTok',
+      },
+      {
+        src: '/images/projects/influencerMarketingTfit7.jpg',
+        link: 'https://www.instagram.com/reels/DYk4h7ZqkNV/',
+        linkKey: 'activity.viewOnInstagram',
+      },
+      {
+        src: '/images/projects/influencerMarketingTfit8.jpg',
+        link: 'https://www.youtube.com/shorts/qV8Z8BluYdQ',
+        linkKey: 'activity.viewOnYouTube',
+      },
+      {
+        src: '/images/projects/influencerMarketingTfit9.jpg',
+        link: 'https://www.instagram.com/reels/DSmG3XciFff/',
+        linkKey: 'activity.viewOnInstagram',
+      },
+      {
+        src: '/images/projects/influencerMarketingTfit2.jpg',
+        link: 'https://www.tiktok.com/@_julietteee_3/video/7432977506472365330',
+        linkKey: 'activity.viewOnTikTok',
+      },
     ],
   },
 ];
@@ -83,7 +152,7 @@ export default function InfluencerMarketingProjectPage() {
         {INFLUENCER_MARKETING_SECTIONS.map((section, sectionIndex) => (
           <div
             key={section.title}
-            className={sectionIndex === 0 ? 'space-y-6 mb-10' : 'space-y-6'}
+            className={sectionIndex === 0 ? 'mb-10 space-y-6' : 'space-y-6'}
           >
             <div className="flex items-center gap-3">
               <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100">
@@ -92,21 +161,71 @@ export default function InfluencerMarketingProjectPage() {
               <div className="h-px flex-1 bg-zinc-300 dark:bg-zinc-700" />
             </div>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {section.images.map((image, idx) => (
-                <div
-                  key={`${section.title}-${idx}`}
-                  className="overflow-hidden rounded-xl border border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900/60"
-                >
-                  <div className="relative aspect-[3/4]">
+              {section.images.map((image, idx) => {
+                const isLandscape = image.orientation === 'landscape';
+                const links =
+                  image.links ??
+                  (image.link && image.linkKey
+                    ? [{ link: image.link, linkKey: image.linkKey }]
+                    : []);
+                const primaryLink = links[0]?.link;
+
+                const media = (
+                  <div
+                    className={`relative w-full overflow-hidden ${
+                      isLandscape ? 'aspect-[3/2]' : 'aspect-[3/4]'
+                    }`}
+                  >
                     <Image
-                      src={image}
+                      src={image.src}
                       alt={`${section.title} ${idx + 1}`}
                       fill
-                      className="object-cover"
+                      className={`object-cover ${isLandscape ? 'object-center' : 'object-bottom'}`}
                     />
                   </div>
-                </div>
-              ))}
+                );
+
+                return (
+                  <div
+                    key={`${section.title}-${idx}`}
+                    className={[
+                      'overflow-hidden rounded-xl border border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900/60',
+                      isLandscape ? 'md:col-span-2 lg:col-span-3' : '',
+                    ]
+                      .filter(Boolean)
+                      .join(' ')}
+                  >
+                    {primaryLink ? (
+                      <a
+                        href={primaryLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block"
+                      >
+                        {media}
+                      </a>
+                    ) : (
+                      media
+                    )}
+                    {links.length > 0 ? (
+                      <div className="flex flex-col gap-2 p-4">
+                        {links.map((item) => (
+                          <a
+                            key={item.link}
+                            href={item.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 text-sm text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200"
+                          >
+                            {t(item.linkKey)}
+                            <span>→</span>
+                          </a>
+                        ))}
+                      </div>
+                    ) : null}
+                  </div>
+                );
+              })}
             </div>
           </div>
         ))}
