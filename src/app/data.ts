@@ -373,31 +373,17 @@ export const EDUCATION: Education[] = [
   },
 ];
 
-export const BLOG_POSTS: BlogPost[] = [
-  // {
-  //   title: 'Building an E-Commerce B2B Korean Apparel platform',
-  //   description:
-  //     'Building a platform for connecting international buyers all around the world.',
-  //   link: 'https://www.oceanstore.kr',
-  //   uid: 'blog-2',
-  // },
-  // {
-  //   title: 'Procharity',
-  //   description: 'Intellectual support for charitable foundations.',
-  //   link: 'https://procharity.ru/',
-  //   uid: 'blog-1',
-  // },
-];
+export const BLOG_POSTS: BlogPost[] = [];
 
 export const ACTIVITY_LIST: Activity[] = [
   {
-    title: 'Nurilounge Offline Event Planning & Execution',
+    title: 'Offline Event Planning & Execution',
     description:
       "Led the planning and execution of Nurilounge's offline event participation, creating event concepts and operational strategies to strengthen brand awareness.",
     images: [
-      '/images/activities/nuriday.jpg',
+      // '/images/activities/nuriday.jpg',
       '/images/activities/nuriday1.jpg',
-      '/images/activities/nuriday2.jpg',
+      // '/images/activities/nuriday2.jpg',
     ],
     uid: 'activity-4',
     link: 'https://www.instagram.com/reel/DO5TaTYkrIQ/',
@@ -433,55 +419,9 @@ export const ACTIVITY_LIST: Activity[] = [
     images: [],
     uid: 'activity-7',
     titleKey: 'activity.miguhara-content-strategy-brand-communication.title',
-    descriptionKey: 'activity.miguhara-content-strategy-brand-communication.description',
+    descriptionKey:
+      'activity.miguhara-content-strategy-brand-communication.description',
   },
-  // {
-  //   title: 'Uniqlo Manager Candidate Program Photo Shoot',
-  //   description:
-  //     'Took part in Uniqlo photo shoot session for Uniqlo manager candidate program',
-  //   images: [
-  //     '/images/uniqlo1.jpeg',
-  //     '/images/uniqlo2.jpeg',
-  //     '/images/uniqlo3.jpeg',
-  //     '/images/uniqlo4.jpeg',
-  //     '/images/uniqlo5.jpeg',
-  //   ],
-  //   uid: 'activity-1',
-  // },
-  // {
-  //   title: 'Amos Professional Workshop',
-  //   description:
-  //     'Participated in Amos Professional Workshop where we discussed development plans for the next fiscal year. Key focus areas included strategic marketing plans for entering new European and Asian markets, identifying emerging market opportunities, and optimizing budget allocation for regional expansion initiatives.',
-  //   images: ['/images/amosWorkshop.png'],
-  //   uid: 'activity-2',
-  // },
-  // {
-  //   title:
-  //     'Field Trip with Mongolian Partners to Amorepacific Factory and Botanical Garden',
-  //   description:
-  //     "Organized a visit with Mongolian business partners to Amorepacific's facilities in Asan, including the factory, headquarters, and botanical garden. Explored the company's production processes, innovative technologies, and sustainable practices. Learned how natural ingredients are cultivated and selected from the botanical garden before being used in product development, while also discussing potential partnership opportunities.",
-  //   images: [
-  //     '/images/Mongolia1.jpg',
-  //     '/images/Mongolia2.jpg',
-  //     '/images/Mongolia3.jpg',
-  //     '/images/Mongolia4.jpg',
-  //   ],
-  //   uid: 'activity-3',
-  //   link: 'https://www.instagram.com/p/DXUS0O5zV4Q/',
-  // },
-];
-
-export const PUBLICATION_LIST: PublicationPost[] = [
-  // {
-  //   title: 'CodeSeoul Backend Bootcamp ',
-  //   link: 'https://www.linkedin.com/posts/kim-vadim_on-the-final-day-of-the-codeseoul-backend-activity-7293836988409860096-rImd?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEkDHSIB85vpEyzTFWg-51yFPPnfjrAHbys',
-  //   uid: 'publication-1',
-  // },
-  // {
-  //   title: 'Supabase Launch Week 15',
-  //   link: 'https://www.linkedin.com/posts/florianldt_yesterday-i-had-a-pleasure-to-be-part-of-activity-7356881878588534784-WByQ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEkDHSIB85vpEyzTFWg-51yFPPnfjrAHbys',
-  //   uid: 'publication-2',
-  // },
 ];
 
 export const SOCIAL_LINKS: SocialLink[] = [
@@ -490,17 +430,6 @@ export const SOCIAL_LINKS: SocialLink[] = [
     link: 'https://www.linkedin.com/in/julia-ten/',
     icon: './icons/linkedin.svg',
   },
-  // {
-  //   label: 'Github',
-  //   link: 'https://github.com/vadimkim0203',
-  //   icon: '/icons/github.svg',
-  // },
-
-  // {
-  //   label: 'Instagram',
-  //   link: 'https://www.instagram.com/kimvadim_/',
-  //   icon: '/icons/instagram (1).svg',
-  // },
 ];
 
 export const SKILLS: Skill[] = [

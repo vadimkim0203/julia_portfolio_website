@@ -28,7 +28,7 @@ interface LanguageContextType {
 const translations: Translations = {
   en: {
     name: 'Yuliya Ten',
-    specialty: 'B2B Marketing | SNS Marketing | Influencer Marketing',
+    specialty: 'Influencer Marketing | Content Marketing | SNS Marketing',
     greetings: 'Hi!',
     introduction: `I'm Yuliya, a digital marketer specializing in SNS marketing, influencer marketing, and beauty brand communications. I have experience planning and managing social media campaigns, building relationships with influencers, and developing marketing strategies that increase brand visibility and engagement. I enjoy combining creativity with statistical insights to create effective campaigns and valuable connections between brands and customers.`,
     headerWork: 'Work Experience',
@@ -43,7 +43,7 @@ const translations: Translations = {
     'activities.title': 'Activities',
     'activities.back': 'Back to activities',
     'projects.back': 'Back to projects',
-    'activity.nurilounge.title': 'Nurilounge Offline Event Planning & Execution',
+    'activity.nurilounge.title': 'Offline Event Planning & Execution',
     'activity.nurilounge.description': "Led the planning and execution of Nurilounge's offline event participation, creating event concepts and operational strategies to strengthen brand awareness.",
     'activity.nurilounge.koreanTitle': '누리라운지(Nurilounge) 오프라인 행사 참여 프로젝트 기획 및 실행',
     'activity.nurilounge.koreanDescription': '브랜드 인지도 확대를 목표로 행사 참여를 주도적으로 제안하고, 참여 콘셉트 및 운영 전략 전반을 기획했습니다.',

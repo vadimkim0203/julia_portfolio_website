@@ -88,11 +88,7 @@ export default function CreativeContentProductionActivity() {
               >
                 <source src={video.src} type="video/mp4" />
               </video>
-              <div className="p-4">
-                <p className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-                  {t('activity.creative-content-production.title')} {index + 1}
-                </p>
-              </div>
+              
             </a>
           ))}
         </div>

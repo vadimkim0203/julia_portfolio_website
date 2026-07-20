@@ -124,7 +124,7 @@ export default function RetailPromotionProjectPage() {
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 transition-colors hover:text-zinc-900 dark:hover:text-zinc-200"
               >
-                <span>OlyaRedAutumn x Miguhara x Gold Apple</span>
+                <span>Miguhara x Gold Apple</span>
               </a>
             </div>
           </div>

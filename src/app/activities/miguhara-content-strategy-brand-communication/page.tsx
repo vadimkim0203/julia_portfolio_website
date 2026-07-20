@@ -63,7 +63,9 @@ export default function MiguharaContentStrategyBrandCommunicationActivity() {
             {t('activity.miguhara-content-strategy-brand-communication.title')}
           </h1>
           <p className="text-lg text-zinc-600 dark:text-zinc-400">
-            {t('activity.miguhara-content-strategy-brand-communication.description')}
+            {t(
+              'activity.miguhara-content-strategy-brand-communication.description',
+            )}
           </p>
         </div>
       </motion.div>
@@ -88,11 +90,6 @@ export default function MiguharaContentStrategyBrandCommunicationActivity() {
               >
                 <source src={video.src} type="video/mp4" />
               </video>
-              <div className="p-4">
-                <p className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-                  {t('activity.miguhara-content-strategy-brand-communication.title')} {index + 1}
-                </p>
-              </div>
             </a>
           ))}
         </div>

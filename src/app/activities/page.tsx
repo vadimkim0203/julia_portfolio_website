@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import Link from 'next/link';
-import { PUBLICATION_LIST, ACTIVITY_LIST } from '@/app/data';
+import { ACTIVITY_LIST } from '@/app/data';
 import { useLanguage } from '@/context/LanguageContext';
 
 const VARIANTS_CONTAINER = {
@@ -45,18 +45,13 @@ export default function Activities() {
 
   // Combine all activities
   const allActivities = [
-    ...ACTIVITY_LIST.filter((activity) => activity.uid !== 'activity-4').map((activity) => ({
-      ...activity,
-      type: 'photo',
-      href: ACTIVITY_ROUTES[activity.uid],
-    })),
-    ...PUBLICATION_LIST.map((publication) => ({
-      uid: publication.uid,
-      title: publication.title,
-      description: publication.title,
-      type: 'publication',
-      href: ACTIVITY_ROUTES[publication.uid],
-    })),
+    ...ACTIVITY_LIST.filter((activity) => activity.uid !== 'activity-4').map(
+      (activity) => ({
+        ...activity,
+        type: 'photo',
+        href: ACTIVITY_ROUTES[activity.uid],
+      }),
+    ),
   ];
 
   return (
@@ -70,7 +65,9 @@ export default function Activities() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-3 pt-6 text-xl font-medium">{t('activities.title')}</h3>
+        <h3 className="mb-3 pt-6 text-xl font-medium">
+          {t('activities.title')}
+        </h3>
         <div className="flex flex-col space-y-3">
           {allActivities.map((activity) => (
             <Link
