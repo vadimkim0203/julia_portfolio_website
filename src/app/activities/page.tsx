@@ -48,7 +48,7 @@ export default function Activities() {
 
   // Combine all activities
   const allActivities = [
-    ...ACTIVITY_LIST.map((activity) => ({
+    ...ACTIVITY_LIST.filter((activity) => activity.uid !== 'activity-4').map((activity) => ({
       ...activity,
       type: 'photo',
       href: ACTIVITY_ROUTES[activity.uid],

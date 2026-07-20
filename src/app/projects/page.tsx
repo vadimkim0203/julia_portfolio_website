@@ -1,12 +1,11 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'motion/react';
 import Link from 'next/link';
 import { AnimatedBackground } from '@/components/ui/animated-background';
 import { BLOG_POSTS } from '@/app/data';
-
-import { TransitionPanel } from '@/components/ui/transition-panel';
+import { useLanguage } from '@/context/LanguageContext';
 
 const VARIANTS_CONTAINER = {
   hidden: { opacity: 0 },
@@ -28,6 +27,29 @@ const TRANSITION_SECTION = {
 };
 
 function Projects() {
+  const { t } = useLanguage();
+
+  const projectEntries = [
+    {
+      uid: 'project-nurilounge',
+      title: t('activity.nurilounge.title'),
+      description: t('activity.nurilounge.description'),
+      link: '/projects/nurilounge',
+    },
+    {
+      uid: 'project-influencer-marketing',
+      title: t('project.influencer-marketing.title'),
+      description: t('project.influencer-marketing.description'),
+      link: '/projects/influencer-marketing',
+    },
+    {
+      uid: 'project-retail-promotion',
+      title: t('project.retail-promotion.title'),
+      description: t('project.retail-promotion.description'),
+      link: '/projects/retail-promotion',
+    },
+  ];
+
   return (
     <motion.main
       className="space-y-24"
@@ -52,11 +74,11 @@ function Projects() {
               duration: 0.2,
             }}
           >
-            {BLOG_POSTS.map((post) => (
+            {[...projectEntries, ...BLOG_POSTS].map((post) => (
               <Link
                 key={post.uid}
-                target="_blank"
-                rel="noopener noreferrer"
+                target={post.link.startsWith('http') ? '_blank' : undefined}
+                rel={post.link.startsWith('http') ? 'noopener noreferrer' : undefined}
                 className="-mx-3 rounded-xl px-3 py-3"
                 href={post.link}
                 data-id={post.uid}

@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { useLanguage } from '@/context/LanguageContext';
 
 const VARIANTS_CONTAINER = {
@@ -33,6 +34,8 @@ const NURILOUNGE_IMAGES = [
 
 export default function NuriloungeActivity() {
   const { t } = useLanguage();
+  const pathname = usePathname();
+  const isProjectsRoute = pathname?.startsWith('/projects');
 
   return (
     <motion.main
@@ -43,11 +46,11 @@ export default function NuriloungeActivity() {
     >
       <motion.div variants={VARIANTS_ITEM} transition={TRANSITION}>
         <Link
-          href="/activities"
+          href={isProjectsRoute ? '/projects' : '/activities'}
           className="inline-flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors mb-8"
         >
           <span>←</span>
-          <span>{t('activities.back')}</span>
+          <span>{isProjectsRoute ? t('projects.back') : t('activities.back')}</span>
         </Link>
 
         <div className="space-y-4">
