@@ -36,6 +36,12 @@ function Projects() {
       link: '/projects/nurilounge',
     },
     {
+      uid: 'project-beauty-box-collaboration',
+      title: t('project.beauty-box-collaboration.title'),
+      description: t('project.beauty-box-collaboration.point1'),
+      link: '/projects/beauty-box-collaboration',
+    },
+    {
       uid: 'project-influencer-marketing',
       title: t('project.influencer-marketing.title'),
       description: t('project.influencer-marketing.description'),

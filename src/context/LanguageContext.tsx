@@ -69,6 +69,12 @@ const translations: Translations = {
     'project.retail-promotion.description': 'Planned and executed promotional campaigns for the Russian retail partner Gold Apple, introducing staff incentive programs, negotiating branded content across official social media channels, and revamping the brand\'s online storefront. These initiatives contributed to a 30% increase in sales.',
     'project.content-strategy-brand-communication.title': 'Content Strategy & Brand Communication',
     'project.content-strategy-brand-communication.description': 'Developed and executed content strategies across digital channels, managing the entire content production process to deliver consistent brand messaging and enhance customer engagement.',
+    'project.beauty-box-collaboration.title': 'Beauty Box Collaboration & Influencer Marketing Campaign for Brand Awareness Growth',
+    'project.beauty-box-collaboration.point1': 'Planned and executed a strategic collaboration with the leading CIS K-beauty influencer bonyabohyun (800K+ total followers).',
+    'project.beauty-box-collaboration.point2': 'Increased brand awareness and acquired new customers through participation in a multi-brand beauty box campaign.',
+    'project.beauty-box-collaboration.point3': 'Achieved a measurable increase in branded search volume on Yandex following the campaign.',
+    'project.beauty-box-collaboration.point4': 'Drove over 37,000 website visits on the product launch day.',
+    'project.beauty-box-collaboration.point5': 'Reached more than 1.9 million users and generated 120+ pieces of campaign content across digital platforms.',
   },
   ko: {
     name: '율리야',
@@ -113,6 +119,12 @@ const translations: Translations = {
     'project.retail-promotion.description': '러시아 리테일 파트너 골드 애플을 위한 프로모션 캠페인을 기획하고 실행하며 직원 인센티브 프로그램을 도입하고, 공식 SNS 채널을 통한 브랜디드 콘텐츠 협상을 진행하며, 브랜드 온라인 스토어를 리뉴얼했습니다. 이러한 활동을 통해 매출을 30% 증가시켰습니다.',
     'project.content-strategy-brand-communication.title': '콘텐츠 전략 및 브랜드 커뮤니케이션',
     'project.content-strategy-brand-communication.description': '디지털 채널 전반에서 콘텐츠 전략을 수립하고 실행하며, 콘텐츠 제작 프로세스 전반을 관리해 일관된 브랜드 메시지를 전달하고 고객 참여를 높였습니다.',
+    'project.beauty-box-collaboration.title': '뷰티 박스 협업 및 인플루언서 마케팅 캠페인을 통한 브랜드 인지도 성장',
+    'project.beauty-box-collaboration.point1': 'CIS 대표 K-뷰티 인플루언서 bonyabohyun(총 팔로워 80만+)과의 전략적 협업을 기획하고 실행했습니다.',
+    'project.beauty-box-collaboration.point2': '멀티 브랜드 뷰티 박스 캠페인 참여를 통해 브랜드 인지도를 높이고 신규 고객을 확보했습니다.',
+    'project.beauty-box-collaboration.point3': '캠페인 이후 Yandex에서 브랜드 검색량의 가시적인 증가를 달성했습니다.',
+    'project.beauty-box-collaboration.point4': '제품 출시 당일 37,000회 이상의 웹사이트 방문을 유도했습니다.',
+    'project.beauty-box-collaboration.point5': '190만 명 이상의 사용자에게 도달했으며, 디지털 플랫폼 전반에서 120개 이상의 캠페인 콘텐츠를 생성했습니다.',
   },
 };
 
