@@ -397,6 +397,7 @@ export const ACTIVITY_LIST: Activity[] = [
       '/images/activities/kazakhstan2025.jpg',
       '/images/activities/moscow.jpg',
       '/images/activities/kazakhstan2026.jpg',
+      '/videos/tfitShort.MP4',
     ],
     uid: 'activity-5',
     titleKey: 'activity.beauty-exhibition.title',
